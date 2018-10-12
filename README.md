@@ -15,11 +15,11 @@ Below, write out how to create a form in a new views method using any of the cla
     
 then in views
   
-  def product_create_view(request):
-    form = ProductForm(request.POST or None)
+  def movie_create_view(request):
+    form = MovieForm(request.POST or None)
     if form.is_valid():
         form.save()
-        form = ProductForm()
+        form = MovieForm()
     context = {
         'form': form
     }
